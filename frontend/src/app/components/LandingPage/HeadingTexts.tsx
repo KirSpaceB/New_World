@@ -1,14 +1,8 @@
-import { DM_Serif_Display } from "next/font/google";
-
-const dm_Serif_Display = DM_Serif_Display({
-  weight:'400',
-  style:['italic'],
-  subsets:['latin']
-});
+import { dm_Serif_Display_italic } from "@/app/Fonts/DM_Serif_Display"
 
 export default function HeadingTexts() {
   return (
-    <div className={dm_Serif_Display.className}>
+    <div className={dm_Serif_Display_italic.className}>
       <p className="absolute top-[48vh] left-[20vw] transform -translate-x-3/5 -translate-y-3/5 text-white md:text-4xl lg:text-6xl lg:left-[20vw] lg:top-[48vh] xl:left-[28vw]">
         NEW WORLD
       </p>

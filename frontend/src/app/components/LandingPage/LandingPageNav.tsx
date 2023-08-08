@@ -1,15 +1,9 @@
 import React from 'react';
-import { DM_Serif_Display } from "next/font/google";
-
-const dm_Serif_Display = DM_Serif_Display({
-  weight:'400',
-  style:['normal', 'italic'],
-  subsets:['latin']
-});
+import { dm_Serif_Display_italic } from '@/app/Fonts/DM_Serif_Display';
 
 export default function LandingPageNav() {
   return (
-    <div className={dm_Serif_Display.className}>
+    <div className={dm_Serif_Display_italic.className}>
       <div>
         <ul className='flex flex-row space-x-10 items-center'>
           <li id='NW_Logo' className='text-6xl inline-block mt-10'>

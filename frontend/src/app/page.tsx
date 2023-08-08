@@ -7,7 +7,7 @@ export default function Home() {
     <div
      className="min-w-screen min-h-screen"
      style={{
-      backgroundImage: `url('/handstouching_imrpoved.jpeg')`,
+      backgroundImage: `url('/handstouching.jpeg')`,
       backgroundSize: 'cover', // Changed from 'fit' to 'cover'
       backgroundPosition: 'center', // Center the background image
      }}>
@@ -21,6 +21,7 @@ export default function Home() {
       </p>
 
       <p id="paragraphs_container">
+        <Paragraphs/>
       </p>
 
     </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Roboto_Font } from '../Fonts/Roboto'
 import { dm_Serif_Display_italic } from '../Fonts/DM_Serif_Display'
+import GoogleSignupOption from './GoogleSignupOption'
+
 export default function page() {
   return (
     <div className={dm_Serif_Display_italic.className}>
@@ -21,12 +23,7 @@ export default function page() {
               <p className='text-xl'>Welcome to New World.</p>
             </div>
 
-            <div className='flex items-center justify-center mt-[1rem] '>
-              <div className='flex justify-center items-center sm:w-[21.563rem] sm:h-[3.375rem] bg-white rounded-xl'>
-                <img src="" alt="" />
-                <span>Sign in with Google</span>
-              </div>
-            </div>
+            <GoogleSignupOption/>
 
             <div className='flex flex-col justify-center items-center mt-[4rem]'>
               <input className='sm:w-[21.563rem] sm:h-[3.375rem] rounded-xl bg-white p-5' type='text' placeholder='username'>

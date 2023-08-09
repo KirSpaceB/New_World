@@ -1,7 +1,11 @@
+'use client'
 import React from 'react';
 import { dm_Serif_Display_italic } from '@/app/Fonts/DM_Serif_Display';
+import Link from 'next/link';
 
 export default function LandingPageNav() {
+
+
   return (
     <div className={dm_Serif_Display_italic.className}>
       <div>
@@ -9,8 +13,10 @@ export default function LandingPageNav() {
           <li id='NW_Logo' className='text-6xl inline-block mt-10'>
             NW
           </li>
-          <li className='text-xl inline-block mt-10'>
-            Product
+          <li className='text-xl inline-block mt-10' >
+            <Link href="/ProductPage">
+              Product
+            </Link>
           </li>
           <li className='text-xl inline-block mt-10'>
             About

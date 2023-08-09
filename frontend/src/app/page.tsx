@@ -16,13 +16,13 @@ export default function Home() {
         <LandingPageNav/>
       </nav>
       
-      <p>
+      <div>
         <NewWorldText/>
-      </p>
+      </div>
 
-      <p id="paragraphs_container">
+      <div id="paragraphs_container">
         <Paragraphs/>
-      </p>
+      </div>
 
     </div>
   )

@@ -6,6 +6,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    // We have to add overflow-y-hidden here
     <html lang="en">
       <body>{children}</body>
     </html>

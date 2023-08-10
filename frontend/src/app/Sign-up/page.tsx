@@ -2,6 +2,7 @@ import React from 'react'
 import { Roboto_Font } from '../Fonts/Roboto'
 import { dm_Serif_Display_italic } from '../Fonts/DM_Serif_Display'
 import GoogleSignupOption from './GoogleSignupOption'
+import CredentialSignUp from './CredentialSignUp'
 
 export default function page() {
   return (
@@ -24,14 +25,7 @@ export default function page() {
 
             <GoogleSignupOption/>
 
-            <div className='flex flex-col justify-center items-center mt-[4rem]'>
-              <input className='sm:w-[21.563rem] sm:h-[3.375rem] rounded-xl bg-white p-5' type='text' placeholder='username'>
-
-              </input>
-              <input className='sm:w-[21.563rem] sm:h-[3.375rem] rounded-xl bg-white mt-[2rem] p-5' type='text' placeholder='password'>
-               
-              </input>
-            </div>
+            <CredentialSignUp/>
 
             <div className='flex justify-center items-end mt-[2px] sm:ml-[220px]'>
               <a href="">Forgot password</a>

@@ -10,7 +10,7 @@ export default function GoogleSignupOption() {
   if(session && session.user) {
     return (
       <div>
-        <p>Signed in as {session.user.email}</p>
+        <p>Google signed in as{session.user.email}</p>
         <button onClick={() => signOut({callbackUrl:'localhost:3000'})}>Sign Out</button>
       </div>
     )

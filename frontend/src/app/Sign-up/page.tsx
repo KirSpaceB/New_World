@@ -8,9 +8,8 @@ export default function page() {
     <div className={dm_Serif_Display_italic.className}>
       <div className='flex'>
         <div className='flex-1 min-h-screen' style={{
-          backgroundImage: `url('/hands_grabbing_face 1.png')`,
+          backgroundImage: `url('/enlarge_metaphor.jpeg')`,
           backgroundSize: 'cover', // Changed from 'fit' to 'cover'
-          backgroundPosition: 'center', // Center the background image
         }}>
         </div>
 

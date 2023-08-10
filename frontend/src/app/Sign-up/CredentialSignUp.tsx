@@ -2,30 +2,33 @@
 import React, { useState } from 'react';
 import { signIn,signOut } from 'next-auth/react';
 import { useSession } from 'next-auth/react';
+import { Roboto_Font } from '../Fonts/Roboto';
+import { useRouter } from 'next/navigation';
 
 export default function CredentialSignUp() {
   const { data: session } = useSession();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  const router = useRouter();
+
   const handleSignIn = async (e:React.FormEvent) => {
       e.preventDefault(); // Prevent default form submission behavior
-
+      console.log(username,password)
       // Sign in using the credentials provider
-      const result = await signIn('credentials', {
-        redirect: false,
-        username,
-        password,
-        callbackUrl: 'http://localhost:3000/Sign-up:',
+      const result = await fetch("./api/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type":"application/json",
+        },
+        body:JSON.stringify({username, password}),
       });
-
-      if (result?.error) {
-        // Handle error accordingly
-        console.error(result.error);
-      } else {
-        // Redirect to landing page or update state as needed
-        window.location.href = 'http://localhost:3000/Sign-up';
+      console.log(result)
+      if(result.ok === true) {
+        console.log('if statement return true')
+        router.push('/')
       }
+
   };
 
   if (session && session.user) {
@@ -55,7 +58,17 @@ export default function CredentialSignUp() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button type='submit'>Sign In</button>
+        <div className='flex justify-center items-end mt-[2px] sm:ml-[220px]'>
+          <a href="">Forgot password</a>
+        </div>
+      <div className={Roboto_Font.className}>
+        <div className='flex justify-center itmes-center'>
+          <div 
+            className='flex justify-center items-center bg-black sm:w-[230px] sm:h-[54px] rounded-full mt-[25px]'>
+            <button type='submit' className='text-white text-4xl'>Sign Up</button>
+          </div>
+        </div>
+      </div>
     </form>
   )
 }

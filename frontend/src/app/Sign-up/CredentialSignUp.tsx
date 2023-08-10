@@ -26,7 +26,7 @@ export default function CredentialSignUp() {
       console.log(result)
       if(result.ok === true) {
         console.log('if statement return true')
-        router.push('/')
+        router.push('/login')
       }
 
   };

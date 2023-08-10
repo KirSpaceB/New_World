@@ -1,4 +1,6 @@
-import './globals.css'
+import './globals.css';
+import Providers from '@/components/Providers';
+
 
 export default function RootLayout({
   children,
@@ -8,7 +10,11 @@ export default function RootLayout({
   return (
     // We have to add overflow-y-hidden here
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Providers>
+          {children}
+        </Providers>
+      </body>
     </html>
   )
 }

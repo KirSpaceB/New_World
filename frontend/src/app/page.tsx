@@ -1,7 +1,7 @@
-import LandingPageNav from "./components/LandingPage/LandingPageNav"
-import NewWorldText from "./components/LandingPage/HeadingTexts"
-import Paragraphs from "./components/LandingPage/Paragraphs"
-import ProductPage from "./components/ProductPage/ProductPage"
+import LandingPageNav from "../components/LandingPage/LandingPageNav"
+import NewWorldText from "../components/LandingPage/HeadingTexts"
+import Paragraphs from "../components/LandingPage/Paragraphs"
+import ProductPage from "../components/ProductPage/ProductPage"
 
 export default function Home() {
   return (

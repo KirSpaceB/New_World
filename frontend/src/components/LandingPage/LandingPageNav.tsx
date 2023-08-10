@@ -2,6 +2,7 @@
 import React from 'react';
 import { dm_Serif_Display_italic } from '@/app/Fonts/DM_Serif_Display';
 import Link from 'next/link';
+import { signIn } from 'next-auth/react';
 
 export default function LandingPageNav() {
 
@@ -23,6 +24,11 @@ export default function LandingPageNav() {
           </li>
           <li className='text-xl inline-block mt-10'>
             Plans
+          </li>
+          <li className='text-xl inline-block mt-10'>
+            <button onClick={() => signIn()}>
+              Sign-up
+            </button>
           </li>
         </ul>
       </div>

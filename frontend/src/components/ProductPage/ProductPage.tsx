@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import handWithBubbles from '../../../../public/hand_with_bubbles.jpeg';
+import handWithBubbles from '../../../public/hand_with_bubbles.jpeg'
 import {textForPage} from './text'
 import { dm_Serif_Display_italic } from '@/app/Fonts/DM_Serif_Display';
 export default function page() {

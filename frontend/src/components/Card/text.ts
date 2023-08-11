@@ -1,0 +1,5 @@
+export const cardText = {
+  card1: "Introducing our base model installation, equipped with superhuman neutral processing capabilities, augmented hearing, and enhanced vision. Unleash the potential of AI integration with the human brain and step into the future of cognitive evolution. Surpassing all limitations!",
+  card2:"Explore the limits of possibility with our advanced model, a sophisticated fusion of AI and human intelligence that transcends conventional boundaries. With state-of-the-art processing, hyper-realistic vision, and auditory precision, it sets a new standard for cognitive enhancement.",
+  card3:"Experience the pinnacle of innovation with our newest model, boasting cutting-edge AI technology that seamlessly melds with human perception. This next-generation interface offers unparalleled processing speed, sharper vision, and adaptive hearing for a truly immersive experience.",
+}

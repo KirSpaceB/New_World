@@ -1,7 +1,9 @@
 import LandingPageNav from "../components/LandingPage/LandingPageNav"
-import NewWorldText from "../components/LandingPage/HeadingTexts"
-import Paragraphs from "../components/LandingPage/Paragraphs"
+import NewWorldText from "../components/LandingPage/HeroText"
 import ProductPage from "../components/ProductPage/ProductPage"
+import PlansPage from "@/components/PlansPage/PlansPage"
+
+
 
 export default function Home() {
   return (
@@ -29,8 +31,8 @@ export default function Home() {
         <ProductPage/>
       </div>
 
-      <div className="min-h-screen min-w-screen">
-        
+      <div className="min-h-screen min-w-screen bg-black">
+        <PlansPage/>
       </div>
     </div>
 

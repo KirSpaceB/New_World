@@ -1,24 +1,16 @@
 import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
-
 const prisma = new PrismaClient();
 
 export async function POST(request:Request) {
-  const {username,password} = await request.json();
+  const {username, password} = await request.json();
+  
+  const user = await prisma.user.findUnique({
+    where: {username: username, password:password},
+  });
 
-  try {
-    const user = await prisma.user.create({
-      data: {
-        username:username,
-        password:password,
-      },
-      
-    })
-  } catch (error) {
-    console.log(error);
-  } finally {
+  if(user) {
     await prisma.$disconnect();
     return NextResponse.json({Response:"success"}, {status:200})
   }
-  
 }

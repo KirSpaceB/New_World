@@ -5,6 +5,7 @@ import { Roboto_Font } from '../Fonts/Roboto';
 import GoogleSignupOption from '../Sign-up/GoogleSignupOption';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import UserAuth from '../ReusableComponents/UserAuth';
 
 export default function page() {
   const [username, setUsername] = useState("")
@@ -30,6 +31,7 @@ export default function page() {
   }
 
   return (
+
     <div className={dm_Serif_Display_italic.className} id='login_parent div'>
       <div className='flex'>
         <div className='flex flex-col flex-1 justify-center items-center' style={{
@@ -45,37 +47,14 @@ export default function page() {
 
           </div>
           <div className='items-center justify-center' id='login_left_side_ui_div'>
-            <form 
-              className='flex flex-col justify-center items-center mt-[4rem]'
-              id='username_password login'
-              onSubmit={handleLogin}
-              >
-              <input 
-                className='sm:w-[21.563rem] sm:h-[3.375rem] rounded-xl bg-white p-5'
-                type='text'
-                placeholder='username'
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
-              <input 
-                className='sm:w-[21.563rem] sm:h-[3.375rem] rounded-xl bg-white mt-[2rem] p-5'
-                type='password'
-                placeholder='password'
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-                <div className='flex justify-center items-end mt-[2px] sm:ml-[220px]'>
-                  <a href="">Forgot password</a>
-                </div>
-              <div className={Roboto_Font.className}>
-                <div className='flex justify-center itmes-center'>
-                  <div 
-                    className='flex justify-center items-center bg-black sm:w-[230px] sm:h-[54px] rounded-full mt-[25px]'>
-                    <button type='submit' className='text-white text-4xl'>Login</button>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <UserAuth
+              username={username}
+              password={password}
+              authType='Login'
+              setUsername={setUsername}
+              setPassword={setPassword}
+              handleAuth={handleLogin}
+            />
           </div>
         </div>
 

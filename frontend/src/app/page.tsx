@@ -22,10 +22,6 @@ export default function Home() {
         <div>
           <NewWorldText/>
         </div>
-
-        <div id="paragraphs_container">
-          <Paragraphs/>
-        </div>
         
       </div>
 

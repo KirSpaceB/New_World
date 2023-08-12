@@ -1,9 +1,9 @@
 "use client"
 import React, { useState } from 'react';
-import { signIn,signOut } from 'next-auth/react';
+import { signOut } from 'next-auth/react';
 import { useSession } from 'next-auth/react';
-import { Roboto_Font } from '../Fonts/Roboto';
 import { useRouter } from 'next/navigation';
+import UserAuth from '../ReusableComponents/UserAuth';
 
 export default function CredentialSignUp() {
   const { data: session } = useSession();
@@ -25,8 +25,7 @@ export default function CredentialSignUp() {
       });
       console.log(result)
       if(result.ok === true) {
-        console.log('if statement return true')
-        router.push('/')
+        router.push('/login')
       }
 
   };
@@ -43,32 +42,13 @@ export default function CredentialSignUp() {
   }
 
   return (
-    <form className='flex flex-col justify-center items-center mt-[4rem]' onSubmit={handleSignIn}>
-      <input 
-        className='sm:w-[21.563rem] sm:h-[3.375rem] rounded-xl bg-white p-5'
-        type='text'
-        placeholder='username'
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input 
-        className='sm:w-[21.563rem] sm:h-[3.375rem] rounded-xl bg-white mt-[2rem] p-5'
-        type='password'
-        placeholder='password'
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-        <div className='flex justify-center items-end mt-[2px] sm:ml-[220px]'>
-          <a href="">Forgot password</a>
-        </div>
-      <div className={Roboto_Font.className}>
-        <div className='flex justify-center itmes-center'>
-          <div 
-            className='flex justify-center items-center bg-black sm:w-[230px] sm:h-[54px] rounded-full mt-[25px]'>
-            <button type='submit' className='text-white text-4xl'>Sign Up</button>
-          </div>
-        </div>
-      </div>
-    </form>
+    <UserAuth
+      username={username}
+      password={password}
+      authType='Sign up'
+      setUsername={setUsername}
+      setPassword={setPassword}
+      handleAuth={handleSignIn}
+    />
   )
 }

@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import UserAuth from '../ReusableComponents/UserAuth';
 
-export default function page() {
+export default function LoginPage() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const router = useRouter()

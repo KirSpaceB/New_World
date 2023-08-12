@@ -25,7 +25,7 @@ export default function CredentialSignUp() {
       });
       console.log(result)
       if(result.ok === true) {
-        router.push('/login')
+        router.push('/')
       }
 
   };
@@ -35,7 +35,7 @@ export default function CredentialSignUp() {
       <div>
         <p>Signed in as {session.user.name}</p>
         <button
-          onClick={() => signOut({callbackUrl:"http://localhost:3000/Sign-up"})}>Sign Out
+          onClick={() => signOut({callbackUrl:"http://localhost:3000"})}>Sign Out
         </button>
       </div>
     );

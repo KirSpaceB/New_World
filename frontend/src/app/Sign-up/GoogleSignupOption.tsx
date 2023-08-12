@@ -25,7 +25,7 @@ export default function GoogleSignupOption() {
     <div className='flex items-center justify-center mt-[1rem]'>
       <div 
         className='flex justify-center items-center sm:w-[21.563rem] sm:h-[3.375rem] bg-white rounded-xl cursor-pointer'
-        onClick={() => signIn('google',{callbackUrl:'http://localhost:3000/Sign-up'})}
+        onClick={() => signIn('google',{callbackUrl:'http://localhost:3000/'})}
       >
         <Image
           src={'/google_icon.png'}

@@ -3,7 +3,7 @@ import { dm_Serif_Display_italic } from '../Fonts/DM_Serif_Display'
 import GoogleSignupOption from './GoogleSignupOption'
 import CredentialSignUp from './CredentialSignUp'
 
-export default function page() {
+export default function SignupPage() {
   return (
     <div className={dm_Serif_Display_italic.className}>
       <div className='flex'>

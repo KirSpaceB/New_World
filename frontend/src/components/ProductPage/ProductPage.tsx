@@ -6,7 +6,12 @@ export default function page() {
   return (
     <div className={dm_Serif_Display_italic.className}>
       <div className="flex">
-        <div className="flex-1">
+        <div 
+          className="flex-1"
+          style={{
+            backgroundColor:"#D47AEB"
+          }}
+        >
           <div className='flex flex-col min-h-screen items-start justify-center sm:items-center sm:mt-20'>
             <p className='text-xl sm:text-6xl sm:mr-[20rem]'>
               Product Text
